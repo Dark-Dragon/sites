@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The FINALS Halloween Wheel Simulation</title>
+    <script src="finalswheel.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="theFINALS-halloween.css">
+</head>
+<body class="gradient-background">
+    <h1>The FINALS Halloween Wheel Simulation</h1>
+    
+	<div class="maincontent">
+		<div class="box">
+			<input type="number" id="items" min="1" max="13" placeholder="13" required>
+			<label for="items">Items (# of Multibuck-only items you're missing)</label>
+			<br>
+			
+			<input type="number" id="rolls" min="1" max="42" placeholder="42" required>
+			<label for="rolls">Rolls (# of rolls you have left on your wheel)</label>
+			<br>
+			
+			<input type="number" id="total" placeholder="1000" required>
+			<label for="total">Simulations (# of simulations to run)</label> 
+			<br>
+			<br>
+			
+			<button onclick="runSimulation()">Start Simulation</button>
+		</div>
+	</div>
+    
+    <h2>Results:</h2>
+    <div id="results"></div>
+</body>
+</html>
