@@ -10,6 +10,10 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	text-align: center;
+}
+
 .gradient-background {
     background: linear-gradient(to bottom, #FFE1AC 0%, #FFFFFF 35%);
 	background-repeat: no-repeat;
