@@ -15,8 +15,36 @@ h2 {
 }
 
 .gradient-background {
-    background: linear-gradient(to bottom, #FFE1AC 0%, #FFFFFF 35%);
+    background: linear-gradient(to bottom, #ffe1ac 0%, #fff 35%);
 	background-repeat: no-repeat;
+}
+
+.hastooltip {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.hastooltip .tooltiptext {
+	visibility: hidden;
+	width: 200px;
+	background-color: #fff9c7;
+	border: 1px solid #000;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -100px;
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+
+.hastooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
 }
 
 label {
