@@ -1,8 +1,11 @@
-function gamba(items, rolls) {
+function gamba(items, rolls, part) {
     let have = {};
+	
+	for (let i = items; i < 20; i++) {
+		have[i] = true;
+	}
+	
 	let i = 0;
-	let part = 0;
-
     while (i < rolls) {
         let rng = Math.floor(Math.random() * 20) + 1;
 		if (have[rng] == true) {
@@ -17,7 +20,7 @@ function gamba(items, rolls) {
     }
 
     let missing = 0;
-    for (let i = 1; i <= items; i++) {
+    for (let i = 1; i <= 20; i++) {
         if (!have[i]) {
             missing += 1;
         }
@@ -26,16 +29,17 @@ function gamba(items, rolls) {
     return missing;
 }
 
-function gambasim(items, rolls, testAmount) {
+function gambasim(items, rolls, parts, testAmount) {
     items = parseInt(items) || 20;
     rolls = parseInt(rolls) || 40;
+	parts = parseInt(parts) || 0;
     let total = parseInt(testAmount) || 10000;
     
     let score = Array(items + 1).fill(0); // Ensure score array has enough slots for all possible missing items
     let resultOutput = '';
 
     for (let i = 0; i < total; i++) {
-        let missing = gamba(items, rolls);
+        let missing = gamba(items, rolls, parts);
         score[missing] = (score[missing] || 0) + 1; // Increment the count for each missing outcome
     }
 
@@ -51,7 +55,8 @@ function gambasim(items, rolls, testAmount) {
 function runSimulation() {
     let items = document.getElementById("items").value;
     let rolls = document.getElementById("rolls").value;
+	let parts = document.getElementById("parts").value;
     let total = document.getElementById("total").value;
 
-    gambasim(items, rolls, total);
+    gambasim(items, rolls, parts, total);
 }
