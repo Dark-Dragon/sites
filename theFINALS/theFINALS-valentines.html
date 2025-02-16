@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The FINALS Halloween Wheel Simulation</title>
+    <script src="finalswheel-valentines.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="theFINALS-halloween.css">
+</head>
+<body class="gradient-background">
+    <h1>The FINALS Valentines Wheel Simulation</h1>
+    
+	<div class="maincontent">
+		<div class="box">
+			<input type="number" id="items" min="1" max="20" placeholder="20" required>
+			<label class="hastooltip" for="items">Items (# of items you're still missing)
+				<span class="tooltiptext">You need all 20 to receive the bonus outfit</span>
+			</label>
+			<br>
+			
+			<input type="number" id="rolls" min="1" max="40" placeholder="40" required>
+			<label class="hastooltip" for="rolls">Spins (# of spins you have left on your wheel)
+				<span class="tooltiptext">You start with 1 and get up to 3 per day, 40 max for the entire event</span>
+			</label>
+			<br>
+			
+			<input type="number" id="total" placeholder="10000" required>
+			<label class="hastooltip" for="total">Simulations (# of simulations to run)
+				<span class="tooltiptext">Choose a higher number for a more accurate approximation at the cost of longer computation time</span>
+			</label> 
+			<br>
+			<br>
+			
+			<button onclick="runSimulation()">Start Simulation</button>
+		</div>
+	</div>
+	
+	<div class="maincontent">
+		<div class="box">
+			<h2>Results:</h2>
+			<div id="results"></div>
+    	</div>
+	</div>
+	
+</body>
+</html>
