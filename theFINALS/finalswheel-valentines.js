@@ -1,13 +1,15 @@
+let totalitems = 20;
+
 function gamba(items, rolls, part) {
     let have = {};
 	
-	for (let i = items; i < 20; i++) {
-		have[i] = true;
+	for (let i = items; i < totalitems; i++) {
+		have[i+1] = true;
 	}
 	
 	let i = 0;
     while (i < rolls) {
-        let rng = Math.floor(Math.random() * 20) + 1;
+        let rng = Math.floor(Math.random() * totalitems) + 1;
 		if (have[rng] == true) {
 			part++;
 			if (part >= 4) {
@@ -20,7 +22,7 @@ function gamba(items, rolls, part) {
     }
 
     let missing = 0;
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= totalitems; i++) {
         if (!have[i]) {
             missing += 1;
         }
