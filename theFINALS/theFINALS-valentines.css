@@ -1,0 +1,90 @@
+/* Add the CSS styles here */
+html, body {
+	font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+.gradient-background {
+    background: linear-gradient(to bottom, #ffa6c6 0%, #fff 35%);
+	background-repeat: no-repeat;
+}
+
+.hastooltip {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.hastooltip .tooltiptext {
+	visibility: hidden;
+	width: 200px;
+	background-color: #fff9c7;
+	border: 1px solid #000;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -100px;
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+
+.hastooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+label {
+	display: inline;
+}
+
+input[type="number"] {
+	width: 75px;
+	border-radius: 5px;
+	display: inline;
+}
+
+select {
+	width: 200px;
+	padding: 5px;
+	border-radius: 5px;
+	display: inline;
+}
+
+.maincontent {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*background-color: #f0f0f0; */
+}
+
+.box {
+	min-width: 400;
+	width: 650;
+	/*background-color: #a0a0a0 */
+}
+
+button {
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	display: inline;
+	width: 100%;
+}
