@@ -33,7 +33,7 @@ function gamba(items, rolls, part) {
 
 function gambasim(items, rolls, parts, testAmount) {
     items = parseInt(items) || 20;
-    rolls = parseInt(rolls) || 40;
+    rolls = parseInt(rolls) || 43;
 	parts = parseInt(parts) || 0;
     let total = parseInt(testAmount) || 10000;
     
